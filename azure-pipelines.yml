@@ -28,6 +28,12 @@ stages:
     pool:
       vmImage: $(vmImageName)
     steps:
+    - task: CopyFiles@2
+      inputs:
+        SourceFolder: '$(agent.builddirectory)/s'
+        Contents: '$(agent.builddirectory)/**/daemon.json'
+        TargetFolder: 'C:\ProgramData\Docker\config'
+        
     - task: Docker@2
       displayName: Build and push an image to container registry
       inputs:
