@@ -1,6 +1,6 @@
 # Pull a pre-built alpine docker image with nginx and python3 installed
-# FROM tiangolo/uwsgi-nginx:python3.8-alpine-2020-12-19
-FROM tiangolo/uwsgi-nginx:python3.8
+FROM tiangolo/uwsgi-nginx:python3.8-alpine-2020-12-19
+# FROM tiangolo/uwsgi-nginx:python3.8
 
 # Set the port on which the app runs; make both values the same.
 #
@@ -30,6 +30,6 @@ COPY . /hello_app
 # If you have additional requirements beyond Flask (which is included in the
 # base image), generate a requirements.txt file with pip freeze and uncomment
 # the next three lines.
-COPY requirements.txt /
-RUN pip install --no-cache-dir -U pip
-RUN pip install --no-cache-dir -r /requirements.txt
+# COPY requirements.txt /
+# RUN pip install --no-cache-dir -U pip
+# RUN pip install --no-cache-dir -r /requirements.txt
