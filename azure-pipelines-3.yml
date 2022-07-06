@@ -38,8 +38,3 @@ stages:
         tags: |
           $(tag)
 
-    - task: AzureWebAppContainer@1
-      inputs:
-        azureSubscription: 'Visual Studio Enterprise Subscription (1cbbacee-0d97-4685-a63a-3304b49eeec5)'
-        appName: 'rdw-docker-web-app'
-        containers: 'rdwcontainer.azurecr.io/wytpythonsamplevscodeflasktutorial/$(tag)'
